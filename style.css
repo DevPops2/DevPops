@@ -338,33 +338,65 @@ section {
       text-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
   }
 }
+/* Desktop navbar stays fixed */
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Mobile-specific changes */
 @media screen and (max-width: 480px) {
+    /* Override desktop navbar */
     .navbar {
-        position: static;  /* This makes the buttons stay in place */
+        position: relative;
         padding: 1rem;
         height: auto;
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
+        margin-bottom: 2rem;
     }
 
-    .services-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem 1rem;
+    .logo {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
     }
 
+    .nav-buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    button {
+        width: 100%;
+        margin: 0;
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+
+    /* Stack service cards vertically */
     .services-grid {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
-        width: 100%;
-        max-width: 350px;
+        gap: 2rem;
+        padding: 1rem;
     }
 
     .service-card {
         width: 100%;
         margin: 0;
+    }
+
+    /* Adjust main content spacing */
+    .content-container {
+        margin-top: 1rem;
+        padding: 0 1rem;
     }
 }
