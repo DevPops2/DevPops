@@ -338,63 +338,33 @@ section {
       text-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
   }
 }
-/* Base navbar styles */
-.navbar {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-}
-
 @media screen and (max-width: 480px) {
     .navbar {
-        position: absolute; /* Changed from fixed to absolute */
+        position: static;  /* This makes the buttons stay in place */
         padding: 1rem;
         height: auto;
         flex-direction: column;
-        top: 0;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
     }
 
-    .logo {
-        margin-bottom: 1rem;
-        font-size: 1.8rem;
+    .services-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
     }
 
-    .nav-buttons {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        gap: 0.5rem;
-    }
-
-    button {
-        width: 100%;
-        margin: 0;
-        padding: 0.7rem;
-        font-size: 1rem;
-    }
-
-    /* Services section mobile fix */
     .services-grid {
-        grid-template-columns: 1fr;
-        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
         width: 100%;
-        box-sizing: border-box;
+        max-width: 350px;
     }
 
     .service-card {
         width: 100%;
-        margin: 0.5rem 0;
-    }
-
-    /* Content spacing fix */
-    .content-container {
-        margin-top: 220px;
-        padding: 0 1rem;
+        margin: 0;
     }
 }
