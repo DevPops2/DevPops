@@ -338,32 +338,43 @@ section {
       text-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
   }
 }
-/* Base styles remain the same */
-/* Mobile Navigation Styles */
+/* Base navbar styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Mobile styles */
 @media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .logo {
+        width: 100%;
+        font-size: 2rem;
     }
 
     .nav-buttons {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
     }
 
     button {
-        width: 100%;
-        padding: 0.8rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* Small Mobile Adjustments */
-@media screen and (max-width: 480px) {
-    .nav-buttons {
-        grid-template-columns: 1fr;
+        min-width: 120px;
+        padding: 0.8rem 1.2rem;
     }
 }
