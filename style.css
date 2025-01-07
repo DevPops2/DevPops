@@ -351,12 +351,13 @@ section {
     z-index: 1000;
 }
 
-/* Mobile Navigation - iPhone & Android */
 @media screen and (max-width: 480px) {
     .navbar {
+        position: absolute; /* Changed from fixed to absolute */
         padding: 1rem;
         height: auto;
         flex-direction: column;
+        top: 0;
     }
 
     .logo {
@@ -378,10 +379,22 @@ section {
         font-size: 1rem;
     }
 
-    /* Adjust main content spacing for mobile */
+    /* Services section mobile fix */
+    .services-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .service-card {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    /* Content spacing fix */
     .content-container {
-        margin-top: 200px; /* Accounts for taller navbar */
+        margin-top: 220px;
         padding: 0 1rem;
     }
 }
-
