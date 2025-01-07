@@ -419,4 +419,86 @@ section {
         font-size: 1rem;
     }
 }
+/* Base styles remain the same */
+
+/* Laptop (1366px and below) */
+@media screen and (max-width: 1366px) {
+    .content-container {
+        padding: 0 4rem;
+    }
+    
+    .main-text h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Tablet (1024px and below) */
+@media screen and (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .main-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tablet Portrait and Mobile (768px and below) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-buttons {
+        gap: 0.8rem;
+    }
+
+    button {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .content-container {
+        padding: 0 2rem;
+    }
+
+    .main-text h1 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content,
+    .contact-content {
+        padding: 2rem;
+    }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-buttons {
+        gap: 0.5rem;
+    }
+
+    button {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .main-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .main-text p {
+        font-size: 1rem;
+    }
+}
+
 
